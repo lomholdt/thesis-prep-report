@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[]{hyperref}
+\usepackage{todonotes}
+
+\usepackage{apacite}
+
+\title{Thesis Preparation Report}
+\author{Jonas Tonny Nielsen \and Jonas Lomholdt}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\listoftodos
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\todo{handin Jan 8th}
+
+\section{Introduction} % Introduction to the project
+A number of studies have shown that introducing clicker systems into classrooms has a positive effect on learning outcomes and classroom interactivity \cite{yourstone2008classroom, siau2006use, lantz2014effectiveness}. 
+
+
+
+%\cite{yourstone2008classroom}
+%\maskciteyear{einstein}. 
+
+\section{Literature Review} % What is already known and done + existing solutions?
+Many different classroom response system solutions already exists, and all seem to have a different approach. Some are made exclusively for children or ground-schoolers (\url{https://kahoot.it}), and some are feature rich, made for conferences and classrooms (\url{http://socrative.com},  \url{https://www.polleverywhere.com} and \url{https://www.iclicker.com/} etc.). The existing literature is centered around physical clickers and the learning outcomes of using them, though there seems to be a lack of research of the use of such systems within the last few years, where smartphones has become widespread/popular among students \cite[p.~1]{stowell2015use}. The least resent literature dating back to around 2007, is mainly focused on physical clicker devices, where the students buy actual "remote control"-looking devices, where more modern solutions (including the smartphone) has not yet matured.
+
+
+
+
+%%% Talk about \cite{stowell2015use} and his comparision between physical clickers and mobile
+
+One of the main reasons to use a classroom response systems is the importance of interactivity in learning \cite{draper2004increasing}.  Studies find that classroom response systems engage interactivity \todo{(ref)} and helps students stay active during lectures. \cite[p.~116]{moredich2007engaging}.
+
+\section{Method}
+
+
+\section{Implementation - Our Contribution - how we are improving this}
+Our idea is to implement a classroom response system from scratch. The system should include features that support asking and answering technical questions.
+
+\subsection{Possible implementation thoughts}
+
+\subsection{Features} % The features of the system
+
+%Users
+    %user roles
+        %Admin
+        %Teacher
+        %Student
+    %Profile picture
+%Classrooms
+    %Search for classrooms
+    %Create classroom (teachers only)
+    %Invite students to classrooms
+    %Group questions by tags
+    %Invite to classroom by email
+    %Request access to classroom
+    %Delete classrooms
+%Questions
+    %Create questions of different types (teachers only)
+        %Multiple Choice questions
+        %Include pictures
+        %Fill-in-the-blank questions
+    %Questions should be open and closeable by teachers (students can/cannot answer)
+    %Students should be notified when new questions are available
+    %Questions should be publishable
+    %Delete questions
+    %Add tags/labels
+%Dashboard (teacher)
+    %Graphs with answer overview
+    %Real-time feed of answers (Pusher/Sockets, green check mark if answered red cross if not-ish)
+%Dashboard (student)
+    %See classrooms
+    %See question history
+
+
+% RESTfull service 
+% thesis.com/classroom/advanced-programming-2015/question/16/
+
+\subsection{Database design}
+
+
+\missingfigure{Database Design}
+
+
+
+
+
+
+%--------------------REFERENCES--------------------%
+\bibliographystyle{apacite}
+\bibliography{ref.bib}
+
+
+\end{document}
