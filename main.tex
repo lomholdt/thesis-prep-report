@@ -1,9 +1,12 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[]{hyperref}
+\usepackage{float}
 \usepackage{todonotes}
-
-\usepackage{apacite}
+\usepackage{graphicx}
+\usepackage{apacite} % http://mirrors.dotsrc.org/ctan/biblio/bibtex/contrib/apacite/apacite.pdf
+\usepackage[font=small,skip=5pt]{caption}
+\usepackage[all]{hypcap}
 
 \title{Thesis Preparation Report}
 \author{Jonas Tonny Nielsen \and Jonas Lomholdt}
@@ -16,32 +19,52 @@
 \listoftodos
 
 \tableofcontents
-%\listoffigures
+\listoffigures
 %\listoftables
 
-\todo{handin Jan 8th}
+\todo{Hand-in Jan 8th}
 
 \section{Introduction} % Introduction to the project
-A number of studies have shown that introducing clicker systems into classrooms has a positive effect on learning outcomes and classroom interactivity \cite{yourstone2008classroom, siau2006use, lantz2014effectiveness}. 
+A number of studies have shown that introducing clicker systems, also known as Classroom Response Systems (CRS),  into classrooms has a positive effect on learning outcomes and classroom interactivity \cite{yourstone2008classroom, siau2006use, lantz2014effectiveness}. The basic clicker systems are defined as 
 
+\begin{quote}
+    \emph{"[...] individual response devices held by individual students allowing them to quickly and anonymously respond to multiple choice questions presented in class. A receiver attached to a classroom computer collects and summarizes the responses instantly and projects them graphically onto the screen for students and the educator to see"} \cite{lantz2014effectiveness}
+\end{quote}
+
+
+
+\begin{figure}[H]
+\capstart
+	\centering
+		%\includegraphics[scale=0.65]{ClassHTMLList.png}
+        \missingfigure{iClicker - An example of an iClicker}
+	\caption{iClicker\label{fig:iclicker}}
+\end{figure}
+
+
+
+%%% Classroom Response System => CRS
+%%% explain a poll, and 'polling' and 'polling devices'
+%%% explain polling fatigue
 
 
 %\cite{yourstone2008classroom}
 %\maskciteyear{einstein}. 
 
 \section{Literature Review} % What is already known and done + existing solutions?
-Many different classroom response system solutions already exists, and all seem to have a different approach. Some are made exclusively for children or ground-schoolers (\url{https://kahoot.it}), and some are feature rich, made for conferences and classrooms (\url{http://socrative.com},  \url{https://www.polleverywhere.com} and \url{https://www.iclicker.com/} etc.). The existing literature is centered around physical clickers and the learning outcomes of using them, though there seems to be a lack of research of the use of such systems within the last few years, where smartphones has become widespread/popular among students \cite[p.~1]{stowell2015use}. 
+Many different classroom response system solutions already exists, and all seem to have a different approach. Some are made exclusively for children or ground-schoolers (\url{https://kahoot.it}), and some are feature rich, made for conferences and classrooms (\url{http://socrative.com}, \url{https://www.polleverywhere.com} and \url{https://www.iclicker.com/} etc.). The most appealing and well implementet version we could find was Mentimeter (\url{https://www.mentimeter.com}), which supports many of the features that would be expected of a CRS. The existing literature is centered around physical clickers and the learning outcomes of using them, though there seems to be a lack of research of the use of such systems within the last few years, where smartphones has become widespread/popular among students \cite[p.~329]{stowell2015use}. 
 
-The least resent literature dating back to around 2007, is mainly focused on physical clicker devices, where the students buy actual "remote control"-looking devices, in a time where more modern solutions (including the smartphone) has not yet matured.
-
-
+The least resent literature dating back to around 2007, is mainly focused on physical clicker devices, where the students buy actual "remote controls" for polling, in a time where more modern solutions (including the smartphone) has not yet matured. And even today, the physical clicker devices still seem to play a significant role in the "clicker community". \citeA{stowell2015use} explains how the use of clicker systems on physical devices has a greater response rate compared to mobile, but with no differences in the final grades. Also the introduction of students bringing their own devices (e.g., the so called \emph{Bring Your Own Device}) introduces new issues such as internet connectivity and the risk of being distracted by the device itself (pp. 331-332).
 
 
 %%% Talk about \cite{stowell2015use} and his comparison between physical clickers and mobile
 
-One of the main reasons to use a classroom response systems is the importance of interactivity in learning \cite{draper2004increasing}. 
-%It's easy for students to attend lectures without participating actively by raising or answering questions, 
-Studies find that classroom response systems engage interactivity and helps students stay active during lectures. \cite[p.~116]{moredich2007engaging, }.
+
+
+
+One of the main reasons to use a classroom response systems is the importance of interactivity in learning \cite{draper2004increasing}. Studies find that classroom response systems engages interactivity, helps students stay active during lectures \cite[p.~116]{moredich2007engaging} and improves learning. \cite<e.g.,>{siau2006use, yourstone2008classroom}. While \citeA{yourstone2008classroom} focuses on actual results in learning outcomes, then most other studies take on an qualitative approach and evaluate teachers and students by asking to their engagement and learning outcomes \cite<e.g.,>{moredich2007engaging}. The latter approach seems to be the most widespread in the literature and focuses more on whether or not students feel they are more engaged than their performance and examination results.
+
+Among the biggest studies of classroom response systems is \emph{Increasing interactivity in lectures using an electronic voting system} by \citeA{draper2004increasing}. This particular study took place over a two year period and found (among other things) that the benefits increases as teachers became aware how to exploit the pedagogy behind the system \cite[p.~93]{draper2004increasing}. The study took place in a time where there was a need for physical hardware (e.g., remote controllers and receivers) in order to facilitate a CRS. %These physical devices 
 
 
 
@@ -96,7 +119,13 @@ Our idea is to implement a classroom response system from scratch. The system sh
 \subsection{Database design}
 
 
-\missingfigure{Database Design}
+\begin{figure}[H]
+\capstart
+	\centering
+		%\includegraphics[scale=0.65]{ClassHTMLList.png}
+        \missingfigure{Database Design}
+	\caption{Database Design\label{fig:database-design}}
+\end{figure}
 
 
 
